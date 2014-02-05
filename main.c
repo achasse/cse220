@@ -6,7 +6,7 @@ int main (int argc, const char *argv[])
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
     bool loop_check = TRUE;
-
+	//test
     while(loop_check)
     {
 		loop_check = get_source_line(*src_file, source_name[MAX_FILE_NAME_LENGTH], date[DATE_STRING_LENGTH]);
