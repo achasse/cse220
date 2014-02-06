@@ -1,11 +1,22 @@
 #include "common.h"
 //This is the main function
+
+/*
+ * QUESIONS
+ * 
+ * Truncate + restore in print function
+ * init_lister arguments?
+ * 
+ */
+
 int main (int argc, const char *argv[])
 {
     FILE *source_file;
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
     bool loop_check = TRUE;
+
+	*source_file = init_lister(argv, source_name, date);
 
     while(loop_check)
     {
@@ -14,11 +25,12 @@ int main (int argc, const char *argv[])
    /* Missing Code Here */
     return 0;
 }
-FILE *init_lister(const char *name, char source_file_name[], char dte[])
+FILE *init_lister(const char *name, char source_file_name[], char date[])
 {
     time_t timer;
     FILE *file;
-
+    // Format timer into readable date
+    // Initialize file using fopen(source_file_name, "r");
     /* Missing Code Here */
     return file;
 }
