@@ -16,12 +16,12 @@ int main (int argc, const char *argv[])
     char date[DATE_STRING_LENGTH];
     bool loop_check = TRUE;
 
-	*source_file = init_lister(argv, source_name, date);
+    source_file = init_lister(argv, source_name, date); //call init_lister to get readable file stream
 
     while(loop_check)
     {
-		loop_check = get_source_line(*src_file, source_name[MAX_FILE_NAME_LENGTH], date[DATE_STRING_LENGTH]);
-	}
+		loop_check = get_source_line(*src_file, source_name, date);
+    }
    /* Missing Code Here */
     return 0;
 }
@@ -29,10 +29,12 @@ FILE *init_lister(const char *name, char source_file_name[], char date[])
 {
     time_t timer;
     FILE *file;
-    // Format timer into readable date
-    // Initialize file using fopen(source_file_name, "r");
+
+    source_file_name = name; //assign name of file to variable source_file_name
+    file = fopen(source_file_name, "r"); // Initialize file using fopen(source_file_name, "r");
+    //format timer into readable date
     /* Missing Code Here */
-    return file;
+    return file; //return readable file stream
 }
 BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
 {
@@ -52,6 +54,7 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     }
     else
     {
+	//if no more lines in file, return false
         return (FALSE);
     }
 }
