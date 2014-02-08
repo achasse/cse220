@@ -1,5 +1,38 @@
 Pseudocode for Lab 2
 
+main function:
+	set  source_file to file returned by calling function init_lister on parameters of main
+	set loop_check to true
+	
+	while loop_check is true
+		set  loop_check to boolean return of call to function get_source_line
+		returns true if line is read, false otherwise
+	endwhile
+	if loop_check is false
+		end program, return 0
+	endif
+
+init_lister function:
+	set source_name to name of file being read
+	set file to return of function call to fopen
+	set date
+	set time 
+		
+
+	return the opened file
+
+get_source_line function:
+	initialize static int line_number to 0	
+
+	if return of fgets function call on source file to get next line is not null
+		call sprintf function to print source line and line number to print_buffer
+		call print_line function on print_buffer to print to console
+		increment line_number by 1
+		return true for function get_source_line
+	else
+		return false, indicating no more lines to read
+	endif
+
 
 
 
