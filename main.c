@@ -20,7 +20,7 @@ int main (int argc, const char *argv[])
 
     while(loop_check)
     {
-		loop_check = get_source_line(*src_file, source_name, date);
+		loop_check = get_source_line(source_file, source_name, date);
     }
    /* Missing Code Here */
     return 0;
