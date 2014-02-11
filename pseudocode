@@ -35,4 +35,18 @@ get_source_line function:
 
 
 
+Pseudocode for print.c
 
+print_line function:
+	if line_count is greater than the maximum number of lines per page
+		call print_page_header() to begin a new page with a header
+		
+	if length of line is greater than the maximum length of a line
+		print truncated line
+
+	else if length of line is equal or less than the max length
+		print the line
+		
+print_page_header function:
+	print a page header using the source name, date, and page number
+	increment page number
