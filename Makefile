@@ -1,3 +1,5 @@
+#Team members: Aaron Chasse, Jake Borg, Doug Liu
+
 #!/bin/bash
 # File: Makefile
 
