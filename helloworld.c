@@ -10,13 +10,14 @@ Doug Liu
 
 // I'm making a commment now! Woo!
 // ebmixed corresponds to Jake Borg
+// dougdliu corresponds to Deming Liu
 
 #include<stdio.h>
 
 main(void)
 {
 	
-	printf("Hello World!\n");
+	printf("Hello World!\n"); //dougdliu: This prints the the line "Hello World!".
 	
 } //end man function
 
