@@ -13,6 +13,7 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
     {
         print_page_header(source_name_to_print, date_to_print);
     }
+    // Prints a substring of line[] using the max length as the size
     printf("%4d: %.*s", line_count, MAX_PRINT_LINE_LENGTH, line);
 }
 
