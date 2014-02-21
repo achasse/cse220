@@ -1,3 +1,5 @@
+For the print.c code I think instead of setting line_count to 0 in the print_page_header function we need to do it in the if block in print_line. The scope of line_count doesn't extend to print_page_header - AC
+
 Still learning git right now
 So you know, I made a new "branch" I think it's called, so that I don't erase the other code. 
 Take a look, tell me what you think
