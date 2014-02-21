@@ -3,11 +3,13 @@
 #!/bin/bash
 # File: Makefile
 
-hello: helloworld.o
-	gcc helloworld.o -o hello
+lister: main.o print.o
+	gcc main.o print.o -o lister
 
-helloworld.o: helloworld.c
-	gcc -c helloworld.c
+main.o: main.c
+	gcc -c main.c
+print.o: print.c
+	gcc -c print.c
 
 
 
