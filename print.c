@@ -21,6 +21,6 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
 static void print_page_header(char source_name[], char date[])
 {
 	static int page_number = 0;
-	printf("Page %4d %*s\t %s\t \n", page_number, MAX_PRINT_LINE_LENGTH/3, source_name, date);
+	printf("Page %3d %*s\t %s\t \n", page_number, MAX_PRINT_LINE_LENGTH/3, source_name, date);
 	page_number++;
 }
