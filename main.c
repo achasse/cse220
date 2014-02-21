@@ -49,16 +49,16 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
 {
     char print_buffer[MAX_SOURCE_LINE_LENGTH + 9];
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
-    static int line_number = 0;		//initialize static variable to keep track of line number, set to 0 for inception
+    static int line_count = 0;		//initialize static variable to keep track of line number, set to 0 for inception
 
 
 
     if (fgets(source_buffer, MAX_SOURCE_LINE_LENGTH, src_file ) != NULL)
     {
-		sprintf(print_buffer, "%d \t\t %s", line_number, source_buffer );	//sends line_number and source_buffer to print_buffer
+		sprintf(print_buffer, "%d \t\t %s", line_count, source_buffer );	//sends line_count and source_buffer to print_buffer
 			
 		print_line(print_buffer, src_name, todays_date);//call print_line method and pass in print_buffer, src_name, and the date
-		line_number++;	//increment line_number for next function call
+		line_count++;	//increment line_count for next function call
 		
         return (TRUE);
     }
