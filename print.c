@@ -1,5 +1,15 @@
 #include "common.h"
 
+/*
+ * Aaron Chasse - achasse
+ * Doug Liu - dougdliu
+ * Jake Borg - ebmixed
+ *
+ * Interfaces between having information in the lister and printing it to the console.
+ * Formats the strings, tracks line and page counts, and calls printf()
+ *
+ */
+
 static void print_page_header(char source_name[], char date[]);
 
 void print_line(char line[], char source_name_to_print[], char date_to_print[])
