@@ -18,7 +18,8 @@ static void print_page_header(char source_name[], char date[]);
 
 void print_line(char line[], char source_name_to_print[], char date_to_print[])
 {
-    // Only executes on first run? 
+    // Initialize line_count to the max lines per page so header is printed before first line
+    //of first page.
     static int line_count = MAX_LINES_PER_PAGE;
 
     //  Test if we need to make a new page - if the line count exceeded the maximum
