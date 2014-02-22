@@ -1,11 +1,15 @@
 #include "common.h"
 
 /*
+ * Authors:
  * Aaron Chasse - achasse
  * Doug Liu - dougdliu
  * Jake Borg - ebmixed
  *
- * Interfaces between having information in the lister and printing it to the console.
+ * CSE 220 TTH 1030-1145 : Lab 2 Phase 2
+ * Instructor: Brian Holton 
+ *
+ * Program description: Interfaces between having information in the lister and printing it to the console.
  * Formats the strings, tracks line and page counts, and calls printf()
  *
  */
