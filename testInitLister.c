@@ -6,24 +6,23 @@
 
 #include "common.h"
 
-int main (int argc, const char *argv[])
+int main ()
 {
     FILE *source_file;
-    char source_name[MAX_FILE_NAME_LENGTH];
-    char date[DATE_STRING_LENGTH];
-    char loop_check = TRUE;
-
-    //copy name of file from input argument into source_name    
-    strcpy(source_name, argv[1]);
-    //FILE source_file pointer will point to return from init_lister: a readable file
-    source_file1 = init_lister(source_name, source_name, date);//Tests the parameter dat
-    source_file2 = init_lister(source_name, source_name, dat);//Tests the parameter dat
-    source_file3 = init_lister(source_name, source_nam, date);//Tests the parameter dat
-    source_file4 = init_lister(source_name, source_nam, dat);//Tests the parameter dat
-    source_file5 = init_lister(source_nam, source_name, date);//Tests the parameter dat
-    source_file6 = init_lister(source_nam, source_name, dat);//Tests the parameter dat
-    source_file7 = init_lister(source_nam, source_nam, date);//Tests the parameter dat
-    source_file8 = init_lister(source_nam, source_nam, dat);//Tests the parameter dat
+    char source_name1[MAX_FILE_NAME_LENGTH] = "Test.c";
+    char source_name2[MAX_FILE_NAME_LENGTH] = "Test.ER#";
+    char date1[DATE_STRING_LENGTH] = "Tue Feb 18 12:57:34 2014";
+    char date2[DATE_STRING_LENGTH] = "Feb Tue 18 12:57:34 2014";
+    
+    source_file1 = init_lister(source_name1, source_name1, date1); //Valid because all parameter is valid
+    source_file2 = init_lister(source_name1, source_name1, date2); //Invalid date format
+    source_file3 = init_lister(source_name1, source_name2, date1); //Invalid source name
+    source_file4 = init_lister(source_name1, source_name2, date2); //Invalid date format and source_name
+    source_file5 = init_lister(source_name2, source_name1, date1); //Invalid date format and source_name 
+    source_file6 = init_lister(source_name2, source_name1, date2); //Invalid date format and source_name
+    source_file7 = init_lister(source_name2, source_name2, date1); //Invalid date format and source_name
+    source_file8 = init_lister(source_name2, source_name2, date2); //Invalid date format and source_name
+    
     
  
     return 0;
