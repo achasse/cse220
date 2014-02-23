@@ -13,20 +13,20 @@
  *
  */
 
-int main (int argc, const char *argv[])
+int main ()
 {
-    FILE *source_file;
-    char source_name[MAX_FILE_NAME_LENGTH];
-    char date[DATE_STRING_LENGTH];
-    char loop_check = TRUE;
+    char source_name1[MAX_FILE_NAME_LENGTH] = "/User/dliu30/Downloads/Test.c";
+    char date1[DATE_STRING_LENGTH] = "Tue Feb 18 20:56:59 2014";
+    char source_name2[MAX_FILE_NAME_LENGTH] = "/User/dliu30/Downloads/Testc";
+    char date2[DATE_STRING_LENGTH] = "Feb Tue 18 20:56:59 2014";
 
     //copy name of file from input argument into source_name    
     strcpy(source_name, argv[1]);
 
-    print_page_header(source_name, date);//Tests the parameter source_name, date
-    print_page_header(source_name, dat);//Tests the parameter source_name, dat
-    print_page_header(source_nam, date);//Tests the parameter source_nam, date
-    print_page_header(source_nam, dat);//Tests the parameter source_nam, dat
+    print_page_header(source_name1, date1);//Valid input because both parameters are correct
+    print_page_header(source_name1, date2);//Invalid parameter because date is in the wrong format
+    print_page_header(source_name2, date1);//Invalid parameter in source_name because source_name2 isn't a correct source name file. 
+    print_page_header(source_name2, date2);//Both are invalid parameters source_name2 and date is wrong.
     
     return 0;
 
