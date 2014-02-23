@@ -8,23 +8,35 @@
 
 int main (int argc, const char *argv[])
 {
-    FILE *source_file;
-    char source_name[MAX_FILE_NAME_LENGTH];
-    char date[DATE_STRING_LENGTH];
-    char loop_check = TRUE;
+    FILE *source_file1;
+    source_file1 = fopen("Test.c", "r");
+    FILE *source_file2;
+    source_file2 = fopen("Image.jpeg, "r");
+    char source_name1[MAX_FILE_NAME_LENGTH] = "Test.c";
+    char source_name2[MAX_FILE_NAME_LENGTH] = "Imagefile"
+    char date1[DATE_STRING_LENGTH] = "Feb Tue 18 20:56:59 2014";
+    char date2[DATE_STRING_LENGTH] = "Tue Feb 18 20:56:59 2014";
+    char loop_check1 = TRUE;
+    char loop_check2 = TRUE;
+    char loop_check3 = TRUE;
+    char loop_check4 = TRUE;
+    char loop_check5 = TRUE;
+    char loop_check6 = TRUE;
+    char loop_check7 = TRUE;
+    char loop_check8 = TRUE;
+    
 
     //copy name of file from input argument into source_name    
     strcpy(source_name, argv[1]);
     
-    //while eof has not been reached contine to loop
-		loop_check = get_source_line(source_file, source_name, date);
-		loop_check = get_source_line(source_file, source_name, dat);
-		loop_check = get_source_line(source_file, source_nam, date);
-		loop_check = get_source_line(source_file, source_nam, dat);
-		loop_check = get_source_line(source_fil, source_name, date);
-		loop_check = get_source_line(source_fil, source_name, dat);
-		loop_check = get_source_line(source_fil, source_nam, date);
-		loop_check = get_source_line(source_fil, source_nam, dat);
+		loop_check1 = get_source_line(source_file1, source_name1, date1); //Valid as all parameters are valid
+		loop_check2 = get_source_line(source_file1, source_name1, date2); //Invalid as date2 is in the wrong format
+		loop_check3 = get_source_line(source_file1, source_name2, date1); //Invalid as source_name2 is wrong
+		loop_check4 = get_source_line(source_file1, source_name2, date2); //Invalid as source_name2 and date2 is wrong
+		loop_check5 = get_source_line(source_file2, source_name1, date1); //Invalid as source_file2 is the wrong type
+		loop_check6 = get_source_line(source_file2, source_name2, date1); //Invalid as source file2 and source_name 2 is wrong
+		loop_check7 = get_source_line(source_file2, source_name2, date1); //source_file2 and source_name2 are invalid
+		loop_check8 = get_source_line(source_file2, source_name2, date2); //All parameters are invalid
 		
 		return 0;
 }//end main function
